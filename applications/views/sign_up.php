@@ -12,7 +12,7 @@
   <body>
     <center>
     <div class="col-lg-5 col-lg-offset-2">
-      <h1>Sign Up Biatch!</h1>
+      <h1>Sign Up!</h1>
       <p>Sign up to continue</p>
       <?php if(isset($_SESSION['success'])){?>
         <div class="alert alert-success"><?php echo $_SESSION['success'];?></div><?php
