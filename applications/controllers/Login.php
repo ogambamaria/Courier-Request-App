@@ -1,6 +1,6 @@
 <?php
 class Login extends CI_Controller{
-  public function login(){
+  public function index(){
     if(isset($_POST['log'])){
       $this->form_validation->set_rules('username','Username','required');
       $this->form_validation->set_rules('password','Password','required');
@@ -18,11 +18,10 @@ class Login extends CI_Controller{
           $this->load->view('UI/home.html');
         }else{
           $this->session->set_flashdata('error','The Account Details you entered do not exist');
-          //redirect("Auth/login","refresh");
         }
       }
     }
-    $this->load->view('login');
+    $this->load->view('login.html');
   }
 }
  ?>
