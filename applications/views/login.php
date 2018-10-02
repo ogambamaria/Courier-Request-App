@@ -49,7 +49,7 @@
 						<span class="input-group-addon">
 						<i class="glyphicon glyphicon-user"></i>
 						</span>
-						<input class="form-control" placeholder="Email address" name="email" type="text" autofocus>
+						<input class="form-control" placeholder="Username" name="username" type="text" autofocus>
             </div>
 						<br>
 						</div>
@@ -63,7 +63,7 @@
 						</div>
 						<br>
 						<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login" name="loginSubmit" style="background-color: #ffa64d; color: #000000; border: none;">
+						<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login" name="log" style="background-color: #ffa64d; color: #000000; border: none;">
 						</div>
 						</div>
 						</div>
@@ -76,6 +76,10 @@
 				</div>
 			</div>
 		</div>
+		<?php if(isset($_SESSION['success'])){?>
+			<div class="alert alert-success"><?php echo $_SESSION['success'];?></div><?php
+		} ?>
+		<?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
 
 		<footer class="page-footer font-small pt-4">
 		    <div class="footer-copyright text-center py-3">© 2018 Copyright:

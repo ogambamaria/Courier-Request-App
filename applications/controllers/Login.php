@@ -14,8 +14,10 @@ class Login extends CI_Controller{
         $numrow = $result->num_rows();
         if($numrow == 1){
           $this->session->set_flashdata('success','Log in was succesful');
-          $_SESSION['userid'] = "";//set sessions
-          $this->load->view('login.html');
+          //set sessions
+          $this->load->library('../controllers/request');
+          //$obj = new $this->request();
+          //$obj->index();
         }else{
           $this->session->set_flashdata('error','The Account Details you entered do not exist');
         }
