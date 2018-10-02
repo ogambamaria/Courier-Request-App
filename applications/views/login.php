@@ -70,7 +70,7 @@
 						</fieldset>
 						</form>
 					</div>
-					<div class="panel-footer ">	Don't have an account? <a href=""> Sign Up Here </a>
+					<div class="panel-footer ">	Don't have an account? <a href="applications\views\sign-up.html"> Sign Up Here </a>
 					</div>
 					</div>
 				</div>
