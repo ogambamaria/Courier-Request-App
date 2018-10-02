@@ -1,46 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-    <title>Sample Sign Up page</title>
-  </head>
-  <body>
-    <center>
-    <div class="col-lg-5 col-lg-offset-2">
-      <h1>Log In!</h1>
-      <p>You <i>could</i> login below, or you could sit there<br> looking at the masterpiece that is this page</p>
-      <?php if(isset($_SESSION['success'])){?>
-        <div class="alert alert-success"><?php echo $_SESSION['success'];?></div><?php
-      } ?>
-      <?php if(isset($_SESSION['error'])){?>
-        <div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php
-      } ?>
-      <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-    <form method="post" action="">
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input class="form-control" name="username" id="username" type="text">
-      </div>
-      <div class="form-group">
-        <label for="phone">Password:</label>
-        <input class="form-control" name="password" id="password" type="password">
-      </div>
-      <div class="text-center">
-        <button class="btn btn-primary" name="log">LOG IN</button>
-      </div>
-    </form>
-    </div>
-  </center>
+<style>
+	.panel-heading {
+		padding: 5px 15px;
+	}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+	.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+	}
+
+	.profile-img {
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	}
+</style>
+
+</head>
+<body>
+		<div class="container" style="margin-top:40px">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-md-offset-4">
+					<div class="panel panel-default">
+					<div class="panel-heading" style="text-align: center">
+						<strong style="font-size: 20px">Login</strong>
+					</div>
+					<div class="panel-body">
+						<form role="form" method="post" action="">
+						<fieldset>
+						<div class="row">
+						<div class="center-block">
+						<img class="profile-img" src="images/tumia-logo-2.png" alt="">
+						</div>
+						<br><br>
+						</div>
+						<div class="row">
+						<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+						<div class="form-group">
+						<div class="input-group">
+						<span class="input-group-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						</span>
+						<input class="form-control" placeholder="Email address" name="email" type="text" autofocus>
+            </div>
+						<br>
+						</div>
+						<div class="form-group">
+						<div class="input-group">
+						<span class="input-group-addon">
+						<i class="glyphicon glyphicon-lock"></i>
+						</span>
+						<input class="form-control" placeholder="Password" name="password" type="password" value="">
+            </div>
+						</div>
+						<br>
+						<div class="form-group">
+						<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login" name="loginSubmit" style="background-color: #ffa64d; color: #000000; border: none;">
+						</div>
+						</div>
+						</div>
+						</fieldset>
+						</form>
+					</div>
+					<div class="panel-footer ">	Don't have an account? <a href="applications\views\sign-up.html"> Sign Up Here </a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="page-footer font-small pt-4">
+		    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+		      <a href="#">Tumia - Courier Request Application</a>
+		    </div>
+		  </footer>
+</body>
 </html>
