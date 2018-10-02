@@ -4,14 +4,34 @@
   <title>
     Tumia | Home
   </title>
-  <link rel="icon" href="images/tumia-logo-2.png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="icon" href="images/tumia-logo-2.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+    <style>
+        #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+    </style>
 </head>
 <body>
 
@@ -62,17 +82,21 @@
     </div>
     <br>
 <label for="pickup">Pickup Location</label>
-<input type="search" class="form-control" id="pickup" placeholder="Enter pickup location">
+<input type="text" class="form-control" id="pickup-input" placeholder="Enter pickup location">
 <br>
 <label for="destination">Drop Off Location</label>
-<input type="search" class="form-control" id="destination" placeholder="Enter drop off location">
+<input type="text" class="form-control" id="destination-input" placeholder="Enter drop off location">
 <br>
 <button type="submit" class="btn btn-primary" name="request">Request a Courier</button>
 </div>
 </form>
 </div>
-<div class="col-9" id="googleMap" style="width:80%; height: 500px; float: right; margin: auto;">
+<div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;">
 </div>
+    <div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
 
 <!-- Footer -->
 <footer class="page-footer font-small pt-4 fixed-bottom">
@@ -81,17 +105,9 @@
     </div>
   </footer>
 
-<script>
-    function myMap() {
-    var mapProp= {
-        center:new google.maps.LatLng(-1.28333 , 36.81667),
-        zoom:12,
-    };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-</script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyDe5KsP-PnNA3aA-C35aug46P8_2P6_uDA&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
+    <script src="http://localhost/Courier-Request-App\assets\js\request.js"></script>
 
 </body>
 </html>

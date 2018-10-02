@@ -20,7 +20,7 @@ class Register extends CI_Controller{
       redirect("Login","refresh");
     }
   }
-    $this->load->view('register');
+    $this->load->view('sign-up');
   }
   public function rider(){
     if(isset($_POST['register'])){
