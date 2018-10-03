@@ -33,7 +33,7 @@
 						<strong style="font-size: 20px">Tumia Sign Up</strong>
 					</div>
 					<div class="panel-body">
-						<form role="form" method="post" action="<?php echo base_url('User/register'); ?>">
+						<form role="form" method="post" action="<?php echo base_url()?>register">
 						<fieldset>
 						<div class="row">
 						<div class="center-block">
@@ -100,7 +100,7 @@
 						</fieldset>
 						</form>
 					</div>
-					<div class="panel-footer "> Have an account? <a href="login.html" onClick=""> Login Here </a>
+					<div class="panel-footer "> Have an account? <a href="<?php echo base_url()?>login"> Login Here </a>
 					</div>
 					</div>
 				</div>

@@ -12,7 +12,7 @@ class request extends CI_Controller{
         'rider_type' => $_POST['rider_type']
       );
       $this->db->insert("user_requests",$data);
-      //$this->session->set_flashdata("Success","Request succesfully recieved");
+      $this->session->set_flashdata("Success","Request succesfully recieved");
       redirect("request","refresh");
     }
   }

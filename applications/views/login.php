@@ -34,11 +34,11 @@
 						<strong style="font-size: 20px">Login</strong>
 					</div>
 					<div class="panel-body">
-						<form role="form" method="post" action="">
+						<form role="form" method="post" action="<?php echo base_url()?>request">
 						<fieldset>
 						<div class="row">
 						<div class="center-block">
-						<img class="profile-img" src="images/tumia-logo-2.png" alt="">
+						<img class="profile-img" src="<?php echo base_url()?>../assets/images/tumia-logo-2.png" alt="">
 						</div>
 						<br><br>
 						</div>
