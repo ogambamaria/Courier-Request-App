@@ -1,17 +1,4 @@
 <?php
-/*
-$severname = "localhost";
-$username = "root";
-$password = " ";
-$dbname = "courier_app";
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-*/
 class Register extends CI_Controller{
   public function index(){
     if(isset($_POST['register'])){
@@ -30,7 +17,7 @@ class Register extends CI_Controller{
       );
       $this->db->insert("users",$data);
       $this->session->set_flashdata("Success","Account Registered Succesfully. Please login");
-      redirect("../Login","refresh");
+      redirect("../request","refresh");
     }
   }
     $this->load->view('sign-up');

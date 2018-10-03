@@ -1,19 +1,4 @@
 <?php
-// require("login.php");
-/*
-$severname = "localhost";
-$username = "root";
-$password = " ";
-$dbname = "tumiaapp";
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-*/
-
 class request extends CI_Controller{
   public function index(){
     if(isset($_POST['request'])){
@@ -28,7 +13,7 @@ class request extends CI_Controller{
       );
       $this->db->insert("requests",$data);
       $this->session->set_flashdata("Success","Request succesfully recieved");
-      redirect("request","refresh");
+      redirect("../request","refresh");
     }
   }
     $this->load->view('user-home');
