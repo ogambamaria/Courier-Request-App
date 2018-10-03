@@ -93,7 +93,7 @@
 						</div>
 						<br>
 						<div class="form-group">
-						<input type="submit" class="btn btn-lg btn-primary btn-block" value="Login" name="register" style="background-color: #ffa64d; color: #000000; border: none;">
+						<input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign Up" name="register" style="background-color: #ffa64d; color: #000000; border: none;">
 						</div>
 						</div>
 						</div>
