@@ -1,21 +1,27 @@
 <?php
-// require("login.php");
-/*
-$severname = "localhost";
-$username = "root";
-$password = " ";
-$dbname = "tumiaapp";
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-*/
-
 class request extends CI_Controller{
   public function index(){
+    if(isset($_POST['log'])){
+      $this->form_validation->set_rules('username','Username','required');
+      $this->form_validation->set_rules('password','Password','required');
+      if($this->form_validation->run() == TRUE){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $this->db->SELECT('*');
+        $this->db->FROM('users');
+        $this->db->WHERE(array('username' => $username, 'password' => $password));
+        $result = $this->db->get();
+        $numrow = $result->num_rows();
+        if($numrow == 1){
+          $this->home();
+        }else{
+          $this->session->set_flashdata('error','The Account Details you entered do not exist');
+          $this->load->view('login');
+        }
+      }
+    }
+  }
+  public function home(){
     if(isset($_POST['request'])){
       $this->form_validation->set_rules('pickup','Pickup location','required');
       $this->form_validation->set_rules('destination','Destination','required');
