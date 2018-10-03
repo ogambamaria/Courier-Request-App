@@ -13,7 +13,7 @@ function initMap() {
 
         var autocomplete = new google.maps.places.Autocomplete(loc_input);
         var autocomplete = new google.maps.places.Autocomplete(dest_input);
-    
+
         // Bind the map's bounds (viewport) property to the autocomplete object,
         // so that the autocomplete requests use the current map bounds for the
         // bounds option in the request.
@@ -23,6 +23,8 @@ function initMap() {
         autocomplete.setFields(
             ['address_components', 'geometry', 'icon', 'name']);
 
+/*
+
         var infowindow = new google.maps.InfoWindow();
         var infowindowContent = document.getElementById('infowindow-content');
         infowindow.setContent(infowindowContent);
@@ -31,8 +33,10 @@ function initMap() {
           anchorPoint: new google.maps.Point(0, -29)
         });
 
+*/
+
         autocomplete.addListener('place_changed', function() {
-          infowindow.close();
+          //infowindow.close();
           marker.setVisible(false);
           var place = autocomplete.getPlace();
           if (!place.geometry) {
