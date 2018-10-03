@@ -82,12 +82,12 @@
   </div>
   <br>
 <label for="pickup">Pickup Location</label>
-<input type="text" class="form-control" id="pickup-input" placeholder="Enter pickup location">
+<input type="text" class="form-control" id="pickup-input" name="pickup" placeholder="Enter pickup location">
 <input type="hidden" id= "lat-pickup" name="lat-pickup">
 <input type="hidden" id= "lng-pickup" name="lng-pickup">
 <br>
 <label for="destination">Drop Off Location</label>
-<input type="text" class="form-control" id="destination-input" placeholder="Enter drop off location">
+<input type="text" class="form-control" id="destination-input" name="destination" placeholder="Enter drop off location">
 <input type="hidden" id= "lat-dropoff" name="lat-dropoff">
 <input type="hidden" id= "lng-dropoff" name="lng-dropoff">
 

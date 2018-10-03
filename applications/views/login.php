@@ -76,8 +76,8 @@
 				</div>
 			</div>
 		</div>
-		<?php if(isset($_SESSION['success'])){?>
-			<div class="alert alert-success"><?php echo $_SESSION['success'];?></div><?php
+		<?php if(isset($_SESSION['error'])){?>
+			<div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php
 		} ?>
 		<?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
 

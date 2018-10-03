@@ -16,7 +16,6 @@ class Register extends CI_Controller{
         'phone' => $_POST['phone'],
       );
       $this->db->insert("users",$data);
-      $this->session->set_flashdata("Success","Account Registered Succesfully. Please login");
       redirect("../request","refresh");
     }
   }
