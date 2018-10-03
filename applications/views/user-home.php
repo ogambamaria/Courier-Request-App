@@ -83,9 +83,14 @@
     <br>
 <label for="pickup">Pickup Location</label>
 <input type="text" class="form-control" id="pickup-input" placeholder="Enter pickup location">
+<input type="hidden" id= "lat-pickup" name="lat-pickup">
+<input type="hidden" id= "lng-pickup" name="lng-pickup">
 <br>
 <label for="destination">Drop Off Location</label>
 <input type="text" class="form-control" id="destination-input" placeholder="Enter drop off location">
+<input type="hidden" id= "lat-dropoff" name="lat-dropoff">
+<input type="hidden" id= "lng-dropoff" name="lng-dropoff">
+
 <br>
 <button type="submit" class="btn btn-primary" name="request">Request a Courier</button>
 </div>
@@ -106,7 +111,7 @@
   </footer>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe5KsP-PnNA3aA-C35aug46P8_2P6_uDA&libraries=places&callback=initMap" async defer></script>
     <script src="<?php echo base_url();?>assets/js/request.js"></script>
 
 </body>
