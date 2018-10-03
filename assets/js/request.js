@@ -13,7 +13,7 @@ function initMap() {
 
         var autocomplete = new google.maps.places.Autocomplete(loc_input);
         var autocomplete = new google.maps.places.Autocomplete(dest_input);
-    
+
         // Bind the map's bounds (viewport) property to the autocomplete object,
         // so that the autocomplete requests use the current map bounds for the
         // bounds option in the request.

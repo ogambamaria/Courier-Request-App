@@ -30,12 +30,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `requests` (
   `id` int(11) NOT NULL,
-  `name` varchar(60) NOT NULL,
-  `address` varchar(100) NOT NULL,
+  `client_name` varchar(60) NOT NULL,
+  `client_address` varchar(100) NOT NULL,
   `pickup_lat` float(10,6) NOT NULL,
   `pickup_lng` float(10,6) NOT NULL,
   `dest_lat` float(10,6) NOT NULL,
   `dest_long` float(10,6) NOT NULL,
+  `consignee_name` varchar(60) NOT NULL,
+  `consignee_number` varchar(100) NOT NULL,
   `response` enum('conflict','unprocessable_entity','accepted','') NOT NULL DEFAULT 'accepted',
   `date_and_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='client requests details';
