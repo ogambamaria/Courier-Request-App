@@ -9,6 +9,15 @@ function initMap() {
         var types = document.getElementById('type-selector');
         var strictBounds = document.getElementById('strict-bounds-selector');
 
+        loc_input.getPosition();
+        dest_input.getPosition();
+
+        document.getElementById('lat-pickup') = loc_input.lat();
+        document.getElementById('lng-pickup') = loc_input.lng();
+        document.getElementById('lat-dropoff') = dest_input.lat();
+        document.getElementById('lng-dropoff') = dest_input.lng();
+
+      
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
         var autocomplete = new google.maps.places.Autocomplete(loc_input);
