@@ -12,15 +12,14 @@ class Register extends CI_Controller{
         'email' => $_POST['email'],
         'password' => $_POST['password'],
         'gender' => $_POST['gender'],
-        'date' => date('dd/mm/yyyy'),
+        'date' => date('d/m/y'),
         'phone' => $_POST['phone'],
       );
       $this->db->insert("users",$data);
-      $this->session->set_flashdata("Success","Account Registered Succesfully. Please login");
-      redirect("Login","refresh");
+      redirect("../request","refresh");
     }
   }
-    $this->load->view('register');
+    $this->load->view('sign-up');
   }
   public function rider(){
     if(isset($_POST['register'])){
