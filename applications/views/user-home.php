@@ -4,7 +4,7 @@
   <title>
     Tumia | Home
   </title>
-    <link rel="icon" href="<?php echo base_url();?>../assets/images/tumia-logo-2.png">
+    <link rel="icon" href="<?php echo base_url();?>/assets/images/tumia-logo-2.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -112,7 +112,7 @@
 
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
-    <script src="<?php echo base_url();?>../assets/js/request.js"></script>
+    <script src="<?php echo base_url();?>/assets/js/request.js"></script>
 
 </body>
 </html>
