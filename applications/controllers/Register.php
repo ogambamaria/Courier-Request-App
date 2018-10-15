@@ -15,7 +15,8 @@ class Register extends CI_Controller{
         'date' => date('d/m/y'),
         'phone' => $_POST['phone'],
       );
-      $this->db->insert("users",$data);
+      $this->load->model('Register_Model');
+      register($data);
       redirect("../request","refresh");
     }
   }
