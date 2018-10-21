@@ -16,7 +16,7 @@ class Register extends CI_Controller{
         'phone' => $_POST['phone'],
       );
       $this->load->model('Register_Model');
-      register($data);
+      $this->Register_Model->register($data);
       redirect("../request","refresh");
     }
   }
