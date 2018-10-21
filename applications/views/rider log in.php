@@ -36,7 +36,7 @@
 						<fieldset>
 						<div class="row">
 						<div class="center-block">
-						<img class="profile-img" src="../Documents/images/tumia-logo-2.png" alt="">
+						<img class="profile-img" src="<?php echo base_url()?>../assets/images/tumia-logo-2.png" alt="">
 						</div>
 						<br><br>
 						</div>

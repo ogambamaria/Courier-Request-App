@@ -47,12 +47,12 @@
         <a class="nav-link" href="<?php echo base_url()?>request">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="user-payment.php">Payment</a>
+        <a class="nav-link" href="<?php echo base_url()?>payment">Payment</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="order-history.php">Order History</a>
+        <a class="nav-link" href="<?php echo base_url()?>history">Order History</a>
       <li class="nav-item">
-        <a class="nav-link" href="user-profile.php">User Profile</a>
+        <a class="nav-link" href="<?php echo base_url()?>profile">User Profile</a>
       </li>
     </ul>
   </div>
