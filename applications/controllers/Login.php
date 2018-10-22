@@ -9,7 +9,15 @@ class Login extends CI_Controller{
         $password = $_POST['password'];
         $this->load->model('Login_Model');
         if($this->Login_Model->login($username,$password)){
-          redirect("../request","refresh");
+          $type = $this->Login_Model->gettype($username,$password);
+          if($type)=="User"){
+            redirect("../request","refresh");
+          }else if($type == "Rider"){
+            redirect("../request","refresh");
+          }else if($type == "Admin"){
+            redirect("../request","refresh");
+          }
+
         }else{
           $this->session->set_flashdata('error','The Account Details you entered do not exist');
         }
