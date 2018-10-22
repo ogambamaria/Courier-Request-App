@@ -12,8 +12,9 @@ class Register extends CI_Controller{
         'email' => $_POST['email'],
         'password' => $_POST['password'],
         'gender' => $_POST['gender'],
-        'date' => date('d/m/y'),
+        'date' => date('dd/mm/yyyy'),
         'phone' => $_POST['phone'],
+        'user_type' => 'User'
       );
       $this->load->model('Register_Model');
       $this->Register_Model->register($data);
@@ -36,9 +37,10 @@ class Register extends CI_Controller{
         'gender' => $_POST['gender'],
         'date' => date('dd/mm/yyyy'),
         'phone' => $_POST['phone'],
+        'user_type' => 'rider'
       );
-      $this->db->insert("users",$data);
-      $this->session->set_flashdata("Success","Account Registered Succesfully. Please login");
+      $this->load->model('Register_Model');
+      $this->Register_Model->register($data);
       redirect("Login","refresh");
     }
   }

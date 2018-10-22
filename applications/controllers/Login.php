@@ -13,11 +13,11 @@ class Login extends CI_Controller{
           if($type == "User"){
             redirect("../request","refresh");
           }else if($type == "Rider"){
-            redirect("../rider","refresh");
+            redirect("../Rider","refresh");
           }else if($type == "Admin"){
-            redirect("../admin","refresh");
+            redirect("../Admin","refresh");
           }else{
-            echo $type;
+            $this->session->set_flashdata('error','The Account Details you entered seem to have an issue. Please Contact an administrator');
           }
 
         }else{
