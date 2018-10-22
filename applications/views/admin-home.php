@@ -44,19 +44,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url()?>request">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url()?>Admin">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-couriers.php">Couriers</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/couriers">Couriers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-users.php">Users</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/users">Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-reports.php">Order History</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/reports">Order History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="user-profile.php">User Profile</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/profile">User Profile</a>
       </li>
     </ul>
   </div>
