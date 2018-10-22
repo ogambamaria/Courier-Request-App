@@ -147,6 +147,49 @@
   <button class="btn btn-success btn-lg btn-block" type="submit">Process Payment</button>
   </div>
   </div>
+            <div id="paypal-button"></div>
+
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <script>
+  // Render the PayPal button
+  paypal.Button.render({
+  env: 'sandbox', // Optional: specify 'sandbox' environment
+  client: {
+    sandbox:    'AVBkvUw88CCp2-yuFp4sLp6k48xagf5LczBaV6E8C5UXEpnnCxeVrZTQjDSQZ7mSg7VM7k21L_WNW6t9',
+    production: 'xxxxxxxxx'
+  },
+  commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+  payment: function (data, actions) {
+    return actions.payment.create({
+      payment: {
+        transactions: [
+          {
+            amount: {
+              total: '300.00',
+              currency: 'USD'
+            }
+          }
+        ]
+      }
+    });
+  },
+  onAuthorize: function (data, actions) {
+    // Get the payment details
+    return actions.payment.get()
+      .then(function (paymentDetails) {
+        // Show a confirmation using the details from paymentDetails
+        document.querySelector('#confirm-button')
+          .addEventListener('click', function () {
+            // Execute the payment
+            return actions.payment.execute()
+              .then(function () {
+                // Show a success page to the buyer
+              });
+          });
+      });
+  }
+}, '#paypal-button');
+  </script>
   <div class="row" style="display:none;">
   <div class="col-xs-12">
   <p class="payment-errors"></p>
