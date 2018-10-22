@@ -31,12 +31,22 @@
       #map #infowindow-content {
         display: inline;
       }
+
+      #map {
+        height: 100%;
+      }
+
+      #logo {
+        height: 30px;
+        width: 30px;
+      }
+
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="<?php echo base_url();?>../assets/images/tumia-logo.png" alt="Tumia"></a>
+  <a class="navbar-brand" href="#"><img src="<?php echo base_url();?>../assets/images/tumia-logo.png" alt="Tumia" id="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -111,7 +121,8 @@
   </footer>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"
+      async defer></script>
     <script src="<?php echo base_url();?>../assets/js/request.js"></script>
 
 </body>
