@@ -3,12 +3,12 @@
     <head>
         <title>Home | Tumia</title>
         <link rel="icon" href="images/icons8_Stork_With_Bundle_96px_1.png">
-                
+
         <style>
             body {
                 font-family: sans-serif;
             }
-            
+
             ul {
                 list-style-type: none;
                 margin: 0;
@@ -61,25 +61,25 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
-            
+
             .googleMap {
                 position: absolute;
             }
-            
+
             .request-form {
                 position: absolute;
                 z-index: 99;
                 top: 18%;
                 left: 10px;
             }
-            
+
             .user-request {
                 background-color: whitesmoke;
                 padding: 10px 10px;
                 margin: 10px;
                 font-size: 16px;
             }
-            
+
             input[type=text] {
                 padding: 5px 20px;
                 margin: 8px 0;
@@ -87,12 +87,12 @@
                 border-radius: 50px;
                 width: 75%;
             }
-            
+
             .user-request p {
                 padding: 0px 5px;
                 margin: 8px 0px;
             }
-            
+
             input[type=submit] {
                 border-radius: 50px;
                 background-color: lightskyblue;
@@ -102,9 +102,9 @@
             }
 
         </style>
-        
+
     </head>
-    
+
     <body>
         <div class="nav-bar">
             <ul>
@@ -121,10 +121,10 @@
                 </li>
             </ul>
         </div>
-        
-        <div class="container">    
+
+        <div class="container">
             <div id="googleMap" style="width:100%; height: 750px;"></div>
-            
+
             <div class="request-form">
                 <form name="request_form" method="post" class="user-request">
                     <input type="text" name="pickup_location" placeholder="Pick Up Location"><br>
@@ -138,9 +138,9 @@
                     <input type="submit" name="request" value="REQUEST COURIER">
                 </form>
             </div>
-        
+
         </div>
-            
+
         <script>
             function myMap() {
             var mapProp= {
@@ -150,11 +150,11 @@
             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
             }
         </script>
-       
+
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"></script>
 
 
-        
+
     </body>
 
 </html>

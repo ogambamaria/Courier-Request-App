@@ -17,7 +17,6 @@ function initMap() {
         document.getElementById('lat-dropoff') = dest_input.lat();
         document.getElementById('lng-dropoff') = dest_input.lng();
 
-      
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
         var autocomplete = new google.maps.places.Autocomplete(loc_input);
@@ -46,7 +45,7 @@ function initMap() {
 
         autocomplete.addListener('place_changed', function() {
           //infowindow.close();
-          marker.setVisible(false);
+          //marker.setVisible(false);
           var place = autocomplete.getPlace();
           if (!place.geometry) {
             // User entered the name of a Place that was not suggested and
@@ -54,7 +53,7 @@ function initMap() {
             window.alert("No details available for input: '" + place.name + "'");
             return;
           }
-
+/*
           // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
@@ -100,3 +99,4 @@ function initMap() {
               autocomplete.setOptions({strictBounds: this.checked});
             });
       }
+*/
