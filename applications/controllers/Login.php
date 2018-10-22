@@ -10,12 +10,14 @@ class Login extends CI_Controller{
         $this->load->model('Login_Model');
         if($this->Login_Model->login($username,$password)){
           $type = $this->Login_Model->gettype($username,$password);
-          if($type)=="User"){
+          if($type == "User"){
             redirect("../request","refresh");
           }else if($type == "Rider"){
-            redirect("../request","refresh");
+            redirect("../rider","refresh");
           }else if($type == "Admin"){
-            redirect("../request","refresh");
+            redirect("../admin","refresh");
+          }else{
+            echo $type;
           }
 
         }else{

@@ -10,5 +10,9 @@ class Login_Model extends CI_Model{
       return false;
     }
   }
+  function gettype($username,$password){
+    $query = $this->db->query("SELECT user_type FROM users WHERE username = '$username' AND password = '$password'");
+    return $query->row()->user_type;
+  }
 }
  ?>
