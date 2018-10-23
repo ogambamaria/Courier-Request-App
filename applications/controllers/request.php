@@ -6,9 +6,9 @@ class request extends CI_Controller{
       $this->form_validation->set_rules('destination','Destination','required');
       if($this->form_validation->run() == TRUE){
         $request = array(
-        'username' => 'Ian',//$_SESSION['username'],
-        'pickup' => $_POST['pickup'],
-        'destination' => $_POST['destination'],
+        'username' => '$_SESSION['username']',//$_SESSION['username'],
+        'pickup' => $_POST['origin-input'],
+        'destination' => $_POST['destination-input'],
         'rider_type' => $_POST['rider_type']
       );
       $this->load->model('Request_Model');

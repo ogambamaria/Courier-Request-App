@@ -108,14 +108,14 @@
             <input type="radio" name="rider-type" value="truck">Truck
         </div>
   </div>
+</div>
   <br>
-<p><label for="pickup">Pickup Location</label>
-<input type="text" class="form-control" id="origin-input" name="pickup" placeholder="Enter a pickup location" style="float:left">
+  <div>
+<label for="pickup">Pickup Location</label>
+<input type="text" class="form-control" id="origin-input" name="pickup" placeholder="Enter a pickup location" style="width:200px;">
 <a href="" id="location-icon" onclick="getLocation()" ><img src="<?php echo base_url();?>../assets/images/location-icon.png"></a>
-</p>
-<br><p>
 <label for="destination">Drop Off Location</label>
-<input type="text" class="form-control" id="destination-input" name="destination" placeholder="Enter a drop off location" style="float:left"></p>
+<input type="text" class="form-control" id="destination-input" name="destination" placeholder="Enter a drop off location" style="width:200px;">
 
 <input type="hidden" id= "lat-pickup" name="lat-pickup" value="">
 <input type="hidden" id= "lng-pickup" name="lng-pickup" value="">
@@ -128,8 +128,7 @@
 </form>
 </div>
 
-<div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;">
-</div>
+<div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;"></div>
     <div id="infowindow-content">
       <img src="" width="16" height="16" id="place-icon">
       <span id="place-name"  class="title"></span><br>
