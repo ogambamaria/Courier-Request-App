@@ -11,6 +11,7 @@ class Login extends CI_Controller{
         if($this->Login_Model->login($username,$password)){
           $type = $this->Login_Model->gettype($username,$password);
           if($type == "User"){
+            $_SESSION['username']=$username;
             redirect("../request","refresh");
           }else if($type == "Rider"){
             redirect("../Rider","refresh");
