@@ -47,12 +47,16 @@
         <a class="nav-link" href="<?php echo base_url()?>#">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Past orders</a>
+        <a class="nav-link" href="#">Account details</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Order History</a>
       <li class="nav-item">
-        <a class="nav-link" href="#">User Profile</a>
+        <a class="nav-link" href="#">waybill</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">earnings</a>
+      
+
       </li>
     </ul>
   </div>
@@ -96,7 +100,7 @@
 
     </div>
   </div>
-  
+
 </div>
 <div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;">
 </div>
@@ -128,7 +132,7 @@
 
     </div>
   </div>
-  
+
 </div>
 
 
