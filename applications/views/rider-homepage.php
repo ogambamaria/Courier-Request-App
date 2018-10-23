@@ -163,14 +163,6 @@ input:checked + .slider:before {
   <span class="slider round"></span>
 </label>
 
-        <div class="container">
-            <div id="map" style="width:100%; height: 750px;"></div>
-
-
-
-
-
-        </div>
         <div id="infowindow-content">
               <img src="" width="20" height="20" id="place-icon">
               <span id="place-name"  class="title"></span><br>
@@ -231,7 +223,11 @@ input:checked + .slider:before {
 
         </div>
 
+                <div class="container">
+                    <div id="map" style="width:100%; height: 750px;"></div>
+        </div>
         <script>
+
             function myMap() {
             var mapProp= {
                 center:new google.maps.LatLng(-1.28333 , 36.81667),
