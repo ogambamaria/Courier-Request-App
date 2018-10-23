@@ -9,10 +9,10 @@ class Login extends CI_Controller{
         $password = $_POST['password'];
         $this->load->model('Login_Model');
         if($this->Login_Model->login($username,$password)){
+          $newdata = array('username' => $username);
+          $this->session->set_userdata($newdata);
           $type = $this->Login_Model->gettype($username,$password);
           if($type == "User"){
-            $newdata = array('username' => $username);
-            $this->session->set_userdata($newdata);
             redirect("../request","refresh");
           }else if($type == "Rider"){
             redirect("../Rider","refresh");
