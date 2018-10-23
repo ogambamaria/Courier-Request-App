@@ -44,19 +44,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url()?>request">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url()?>Admin">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-couriers.php">Couriers</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/couriers">Couriers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-users.php">Users</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/users">Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-reports.php">Order History</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/reports">Order History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="user-profile.php">User Profile</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/profile">User Profile</a>
       </li>
     </ul>
   </div>
@@ -82,7 +82,8 @@
   </footer>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"
+      async defer></script>
+    <script src="<?php echo base_url();?>../assets/js/request.js"></script>
 </body>
 </html>

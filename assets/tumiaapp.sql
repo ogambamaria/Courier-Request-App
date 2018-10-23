@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2018 at 04:30 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Generation Time: Oct 22, 2018 at 07:47 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,28 +19,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `courier_app`
+-- Database: `tumiaapp`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `requests`
---
-
-CREATE TABLE `requests` (
-  `id` int(11) NOT NULL,
-  `client_name` varchar(60) NOT NULL,
-  `client_address` varchar(100) NOT NULL,
-  `pickup_lat` float(10,6) NOT NULL,
-  `pickup_lng` float(10,6) NOT NULL,
-  `dest_lat` float(10,6) NOT NULL,
-  `dest_long` float(10,6) NOT NULL,
-  `consignee_name` varchar(60) NOT NULL,
-  `consignee_number` varchar(100) NOT NULL,
-  `response` enum('conflict','unprocessable_entity','accepted','') NOT NULL DEFAULT 'accepted',
-  `date_and_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='client requests details';
 
 -- --------------------------------------------------------
 
@@ -56,25 +36,34 @@ CREATE TABLE `users` (
   `gender` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
-  `address` varchar(100) DEFAULT NULL
+  `address` varchar(100) DEFAULT NULL,
+  `user_type` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `gender`, `date`, `phone`, `address`) VALUES
-(7, 'poppinjay13', 'thisian13@gmail.com', 'Password', 'Male', 'Mon-Sep-2018', '0713009333', 'Madaraka Estate, Ole Sangale Rd, Nairobi');
+INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `gender`, `date`, `phone`, `address`, `user_type`) VALUES
+(7, 'poppinjay13', 'thisian13@gmail.com', 'Password', 'Male', 'Mon-Sep-2018', '0713009333', 'Madaraka Estate, Ole Sangale Rd, Nairobi', 'User');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_requests`
+--
+
+CREATE TABLE `user_requests` (
+  `RequestID` int(254) NOT NULL,
+  `UserID` int(254) NOT NULL,
+  `Pickup` varchar(254) NOT NULL,
+  `Destination` varchar(254) NOT NULL,
+  `Rider` varchar(254) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `requests`
---
-ALTER TABLE `requests`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -83,20 +72,26 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `user_requests`
 --
+ALTER TABLE `user_requests`
+  ADD KEY `RequestID` (`RequestID`);
 
 --
--- AUTO_INCREMENT for table `requests`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `user_requests`
+--
+ALTER TABLE `user_requests`
+  MODIFY `RequestID` int(254) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

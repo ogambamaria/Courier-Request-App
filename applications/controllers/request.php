@@ -11,7 +11,8 @@ class request extends CI_Controller{
         'destination' => $_POST['destination'],
         'rider_type' => $_POST['rider_type']
       );
-      $this->db->insert("user_requests",$request);
+      $this->load->model('Request_Model');
+      $this->Request_Model->request($request);
       $this->session->set_flashdata("Success","Request succesfully recieved");
       redirect("../request","refresh");
     }

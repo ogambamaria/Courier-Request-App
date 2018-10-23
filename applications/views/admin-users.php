@@ -25,19 +25,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url()?>request">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url()?>Admin">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-couriers.php">Couriers</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/couriers">Couriers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-users.php">Users</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/users">Users</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin-reports.php">Order History</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/reports">Order History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="user-profile.php">User Profile</a>
+        <a class="nav-link" href="<?php echo base_url();?>Admin/profile">User Profile</a>
       </li>
     </ul>
   </div>
@@ -47,28 +47,24 @@
 <div class="col-md-12">
 <div class="card mx-auto">
 <h4 class="card-title"><strong>List of Users</strong></h4>
-<div class="table" id="courier-list">
-  <!---Sample table, use php to fetch from database--->
-  <table class="table" style="width: 100%;">
-    <th>ID</th>
-    <th>Full Name</th>
-    <th>Last Modified</th>
+<div class="table">
+  <table class="table">
+    <th>Username</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <?php foreach ($h->result() as $row){ ?>
     <tr>
-      <td>201</td>
-      <td>John Doe</td>
-      <td>19.04.2017</td>
+      <td><?php echo $row->username;?></td>
+      <td><?php echo $row->email;?></td>
+      <td><?php echo $row->gender;?></td>
+      <td><?php echo $row->phone;?></td>
+      <td><?php echo $row->address;?></td>
     </tr>
-    <tr>
-      <td>202</td>
-      <td>John Doe</td>
-      <td>29.04.2017</td>
-    </tr>
-    <tr>
-      <td>203</td>
-      <td>John Doe</td>
-      <td>19.07.2017</td>
-    </tr>
-  </table>
+    <?php } ?>
+   </table>
+
 </div>
 </div>
 </div>
