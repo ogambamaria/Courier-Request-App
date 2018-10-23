@@ -47,28 +47,24 @@
 <div class="col-md-12">
 <div class="card mx-auto">
 <h4 class="card-title"><strong>List of Users</strong></h4>
-<div class="table" id="courier-list">
-  <!---Sample table, use php to fetch from database--->
-  <table class="table" style="width: 100%;">
-    <th>ID</th>
-    <th>Full Name</th>
-    <th>Last Modified</th>
+<div class="table">
+  <table class="table">
+    <th>Username</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <?php foreach ($h->result() as $row){ ?>
     <tr>
-      <td>201</td>
-      <td>John Doe</td>
-      <td>19.04.2017</td>
+      <td><?php echo $row->username;?></td>
+      <td><?php echo $row->email;?></td>
+      <td><?php echo $row->gender;?></td>
+      <td><?php echo $row->phone;?></td>
+      <td><?php echo $row->address;?></td>
     </tr>
-    <tr>
-      <td>202</td>
-      <td>John Doe</td>
-      <td>29.04.2017</td>
-    </tr>
-    <tr>
-      <td>203</td>
-      <td>John Doe</td>
-      <td>19.07.2017</td>
-    </tr>
-  </table>
+    <?php } ?>
+   </table>
+
 </div>
 </div>
 </div>
