@@ -171,6 +171,65 @@ input:checked + .slider:before {
 
 
         </div>
+        <div id="infowindow-content">
+              <img src="" width="20" height="20" id="place-icon">
+              <span id="place-name"  class="title"></span><br>
+              <span id="place-address"></span>
+              <div class="container">
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">show requests</button>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Pick up requests</h4>
+                </div>
+                <div class="modal-body">
+                  <p>You have no new requests.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;">
+        </div>
+            <div id="infowindow-content">
+              <img src="" width="20" height="20" id="place-icon">
+              <span id="place-name"  class="title"></span><br>
+              <span id="place-address"></span>
+              <div class="container">
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">show requests</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Ride requests</h4>
+                </div>
+                <div class="modal-body">
+                  <p>You have no new requests.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
 
         <script>
             function myMap() {
