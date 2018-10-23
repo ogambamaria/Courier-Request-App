@@ -66,7 +66,7 @@
                 position: absolute;
             }
 
-      
+
 .switch {
   position: relative;
   display: inline-block;
@@ -74,7 +74,7 @@
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -127,7 +127,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-           
+
 
         </style>
 
@@ -162,13 +162,13 @@ input:checked + .slider:before {
   <input type="checkbox" checked>
   <span class="slider round"></span>
 </label>
- 
-        <div class="container">
-            <div id="googleMap" style="width:100%; height: 750px;"></div>
 
-            
-        
- 
+        <div class="container">
+            <div id="map" style="width:100%; height: 750px;"></div>
+
+
+
+
 
         </div>
 
@@ -182,8 +182,9 @@ input:checked + .slider:before {
             }
         </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"></script>
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"
+            async defer></script>
+          <script src="<?php echo base_url();?>../assets/js/request.js"></script>
 
 
     </body>

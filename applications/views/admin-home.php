@@ -82,7 +82,8 @@
   </footer>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap" async defer></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcM_n70Tmi9V87FRnw0AesYjqz2qUVdbI&libraries=places&callback=initMap"
+      async defer></script>
+    <script src="<?php echo base_url();?>../assets/js/request.js"></script>
 </body>
 </html>
