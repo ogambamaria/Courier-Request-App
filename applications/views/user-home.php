@@ -14,27 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <style>
-        #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
-
-      #infowindow-content .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
-      }
-
-      #map {
-        height: 100%;
-      }
 
       #logo {
         height: 30px;
@@ -92,30 +71,33 @@
     <label for="vehicle">Select a vehicle type</label>
     <div class="row">
         <div class="col">
-            <span class="glyphicon glyphicon-search"></span>
+            <span class="glyphicon"><img src="<?php echo base_url();?>../assets/images/motorcycle-icon.png" alt="Tumia" id="logo"></span>
             <input type="radio" name="rider-type" value="bike" checked>Motorbike
         </div>
         <div class="col">
-            <span class="glyphicon glyphicon-search"></span>
+            <span class="glyphicon"><img src="<?php echo base_url();?>../assets/images/car-icon.png" alt="Tumia" id="logo"></span>
             <input type="radio" name="rider-type" value="car">Car
         </div>
         <div class="col">
-            <span class="glyphicon glyphicon-search"></span>
+            <span class="glyphicon"><img src="<?php echo base_url();?>../assets/images/van-icon.png" alt="Tumia" id="logo"></span>
             <input type="radio" name="rider-type" value="van">Van
         </div>
         <div class="col">
-            <span class="glyphicon glyphicon-search"></span>
+            <span class="glyphicon"><img src="<?php echo base_url();?>../assets/images/truck-icon.png" alt="Tumia" id="logo"></span>
             <input type="radio" name="rider-type" value="truck">Truck
         </div>
   </div>
 </div>
   <br>
-  <div>
-<label for="pickup">Pickup Location</label>
-<input type="text" class="form-control" id="origin-input" name="pickup" placeholder="Enter a pickup location" style="width:200px;">
-<a href="" id="location-icon" onclick="getLocation()" ><img src="<?php echo base_url();?>../assets/images/location-icon.png"></a>
+  <div class="form-group">
+<label for="pickup">Pickup Location</label><a href="" id="location-icon" onclick="getLocation()" ><img src="<?php echo base_url();?>../assets/images/location-icon.png"></a><br>
+<input type="text" class="form-control" id="origin-input" name="pickup" placeholder="Enter a pickup location" style="width:300px;">
 <label for="destination">Drop Off Location</label>
-<input type="text" class="form-control" id="destination-input" name="destination" placeholder="Enter a drop off location" style="width:200px;">
+<input type="text" class="form-control" id="destination-input" name="destination" placeholder="Enter a drop off location" style="width:300px;">
+<label for="consignee-name">Consignee Name</label>
+<input type="text" class="form-control" id="consignee-name" name="name-con" placeholder="Enter the consignee's name" style="width:300px;">
+<label for="consignee-number">Consignee Number</label>
+<input type="text" class="form-control" id="consignee-number" name="phone-con" placeholder="Enter the consignee's phone number" style="width:300px;">
 
 <input type="hidden" id= "lat-pickup" name="lat-pickup" value="">
 <input type="hidden" id= "lng-pickup" name="lng-pickup" value="">
@@ -128,11 +110,7 @@
 </form>
 </div>
 
-<div class="col-9" id="map" style="width:80%; height: 500px; float: right; margin: auto;"></div>
-    <div id="infowindow-content">
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span>
+<div class="col-9" id="map" style="width:80%; height: 600px; float: right; margin: auto;"></div>
 
 <!-- Footer -->
 <footer class="page-footer font-small pt-4 fixed-bottom">
