@@ -6,22 +6,16 @@ class request extends CI_Controller{
       $this->form_validation->set_rules('destination','Destination','required');
       if($this->form_validation->run() == TRUE){
         $request = array(
-<<<<<<< HEAD
-        'username' => $_SESSION['username'],//$_SESSION['username'],
+        'username' => $_SESSION['username'],
         'consignee_name' => $_POST['name-con'],
         'consignee-phone' => $_POST['phone-con'],
         'pickup_lat' => $_POST['lat-pickup'],
-        'pickup_lng' => $_POST['lng-pickup']
+        'pickup_lng' => $_POST['lng-pickup'],
         'dest_lat' => $_POST['lat-dropoff'],
         'dest_lng' => $_POST['lng-dropoff'],
         'date_and_time' => date("Y-m-d H:i:s"),
         'price_estimate' => '300',
         'response' => 'accepted',
-=======
-        'username' => $_SESSION['username'],
-        'pickup' => $_POST['origin-input'],
-        'destination' => $_POST['destination-input'],
->>>>>>> 0bd04ed008f32e774baf00b9e26840dd2dae5a35
         'rider_type' => $_POST['rider_type']
       );
       $this->load->model('Request_Model');

@@ -23,12 +23,33 @@ function initMap() {
         this.directionsDisplay.setMap(map);
 
         var originAutocomplete = new google.maps.places.Autocomplete(
-            originInput, {placeIdOnly: true});
-        var destinationAutocomplete = new google.maps.places.Autocomplete(
-            destinationInput, {placeIdOnly: true});
+            originInput);
 
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+        var destinationAutocomplete = new google.maps.places.Autocomplete(
+            destinationInput);
+
+            this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+            this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+
+            var pickup_lat = NULL;
+            var pickup_lng = NULL;
+            var dropoff_lat = NULL;
+            var dropoff_lng = NULL;
+
+            var pickup_lat = originAutocomplete.geometry.location.lat();
+            var pickup_lng = originAutocomplete.geometry.location.lng();
+
+            var pickup_lat = document.getElementById('lat-pickup');
+            var pickup_lng = document.getElementById('lng-pickup');
+            var dropoff_lat = destinationAutocomplete.geometry.location.lat();
+            var dropoff_lng = destinationAutocomplete.geometry.location.lng();
+            var dropoff_lat = document.getElementById('lat-dropoff');
+            var dropoff_lng = document.getElementById('lng-dropoff');
+
+            console.log(pickup_lat);
+            console.log(dropoff_lat);
+
+
 
         /*this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
