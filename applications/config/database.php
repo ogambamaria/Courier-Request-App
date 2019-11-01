@@ -82,7 +82,7 @@ $db['default'] = array(
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => (ENVIRONMENT == 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
@@ -94,19 +94,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
-echo '<pre>';
-  print_r($db['default']);
-  echo '</pre>';
-
-  echo 'Connecting to database: ' .$db['default']['database'];
-  $dbh=mysql_connect
-  (
-    $db['default']['hostname'],
-    $db['default']['username'],
-    $db['default']['password'])
-    or die('Cannot connect to the database because: ' . mysql_error());
-    mysql_select_db ($db['default']['database']);
-
-    echo '<br />   Connected OK:'  ;
-    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);
