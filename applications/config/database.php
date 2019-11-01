@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '34.70.178.1',
 	'username' => 'maria',
 	'password' => 'project',
 	'database' => 'TumiaApp',
