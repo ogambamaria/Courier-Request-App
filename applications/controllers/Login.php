@@ -13,7 +13,7 @@ class Login extends CI_Controller{
           $this->session->set_userdata($newdata);
           $type = $this->Login_Model->gettype($username,$password);
           if($type == "User"){
-            redirect("../user-home","refresh");
+            redirect("../request","refresh");
           }else if($type == "Rider"){
             redirect("../Rider","refresh");
           }else if($type == "Admin"){
@@ -27,7 +27,7 @@ class Login extends CI_Controller{
         }
       }
     }
-    $this->load->view('/');
+    $this->load->view('login');
   }
 }
  ?>
