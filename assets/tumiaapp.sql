@@ -45,7 +45,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `gender`, `date`, `phone`, `address`, `user_type`) VALUES
-(7, 'poppinjay13', 'thisian13@gmail.com', 'Password', 'Male', 'Mon-Sep-2018', '0713009333', 'Madaraka Estate, Ole Sangale Rd, Nairobi', 'User');
+(7, 'someperson', 'someperson@gmail.com', 'Password', 'Male', 'Mon-Sep-2018', '0712345678', 'Madaraka Estate, Ole Sangale Rd, Nairobi', 'User');
 
 -- --------------------------------------------------------
 
